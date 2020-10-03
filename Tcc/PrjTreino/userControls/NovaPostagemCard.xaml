@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="PrjTreino.userControls.NovaPostagemCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PrjTreino.userControls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+              d:DesignHeight="30" d:DesignWidth="300" Background="White">
+    <Grid>
+        <Grid>
+            <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="10">
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel MouseLeftButtonDown="BtnNewPost_MouseLeftButtonDown" ToolTip="Nova Postagem" x:Name="btnNewPost" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" Width="90">
+                        <StackPanel  Orientation="Horizontal" Height="30">
+                            <materialDesign:PackIcon Kind="Plus" Width="10" Height="10" Foreground="Blue" VerticalAlignment="Center">
+                            </materialDesign:PackIcon>
+                            <TextBlock FontSize="10" VerticalAlignment="Center" Margin="5,0,0,0" Foreground="Blue">
+                            Nova Postagem
+                            </TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                    <TextBlock Name="NotaContent" Width="120" Margin="50,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="Black">
+                    </TextBlock>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>
