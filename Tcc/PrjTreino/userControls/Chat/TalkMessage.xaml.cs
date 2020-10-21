@@ -44,6 +44,8 @@ namespace PrjTreino.userControls.Chat
                 if (m.Author != StaticKeys.id_func.ToString() && m.Author != StaticKeys.idFuncChat.ToString()) continue;
 
                  if (m.Destinatario != StaticKeys.idFuncChat.ToString() && m.Author == StaticKeys.id_func.ToString()) continue;
+                 
+                 if (m.Destinatario != StaticKeys.idFuncChat.ToString() && m.Destinatario != StaticKeys.id_func.ToString()) continue;
 
 
                     messages.Items.Add(new ListViewItem()
