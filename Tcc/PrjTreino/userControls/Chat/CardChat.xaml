@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="PrjTreino.userControls.Chat.CardChat"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PrjTreino.userControls.Chat"
+             mc:Ignorable="d" 
+             d:DesignHeight="70" Background="#707070" d:DesignWidth="150">
+    <Grid>
+        <Border  Background="White" BorderThickness="1" BorderBrush="#a8a8a8">
+            <StackPanel MouseEnter="Content_MouseEnter" MouseLeave="Content_MouseLeave"  Cursor="Hand" x:Name="content" MouseDown="Content_MouseDown" Orientation="Horizontal">
+                <Button BorderBrush="White" HorizontalAlignment="Left" x:Name="btnUser" Margin="10,0,0,0"  Style="{StaticResource MaterialDesignFloatingActionLightButton}"  Background="White" VerticalAlignment="Center" Height="30" Width="30">
+                    <Image x:Name="imageButton"></Image>
+                </Button>
+                <TextBlock x:Name="txtUsername" Margin="10,0,10,0" HorizontalAlignment="Right" FontSize="18" VerticalAlignment="Center" Text="username"/>
+            </StackPanel>
+        </Border>
+       
+    </Grid>
+</UserControl>

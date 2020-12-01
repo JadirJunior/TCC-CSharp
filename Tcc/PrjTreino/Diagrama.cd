@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PrjTreino.Utils.Conversions">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\Conversions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrjTreino.Utils.Message">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAgAAAAAAgAAAAIAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Utils\Message.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrjTreino.Utils.Socket">
+    <Position X="6" Y="2.5" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="PrjTreino.Utils.Socket.messageCallback" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Utils\Socket.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAEAAAAAAAAAAAgAABAAAAAA=</HashCode>
+      <FileName>Utils\Socket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrjTreino.NotificationMessage" Collapsed="true">
+    <Position X="10.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAEAAAAAAAAAAAAAAAACAEAAAIAEAAAA=</HashCode>
+      <FileName>NotificationMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrjTreino.NotificationError" Collapsed="true">
+    <Position X="10.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NotificationMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrjTreino.NotificationInformation" Collapsed="true">
+    <Position X="8.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NotificationMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrjTreino.NotificationSucesfull" Collapsed="true">
+    <Position X="12.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NotificationMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrjTreino.trocaProp">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAIAAAAAAAAAAgAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>StaticKeys.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PrjTreino.StaticKeys">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAEDAAAABEACAAAAEAACABAAAAAAAEAAAACAA=</HashCode>
+      <FileName>StaticKeys.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrjTreino.Controles.calendarioControler">
+    <Position X="8.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAABAAAAAAAAAAAAAAAACAAAgAAAAA=</HashCode>
+      <FileName>Controles\calendarioControler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrjTreino.Controles.FuncControler">
+    <Position X="13" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAYAAAAAAAAAABCAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controles\FuncControler.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Funcionario" />
+      <Property Name="FuncCommands" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PrjTreino.Controles.loginControler">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAACAAAAAAAAAABAAAAAAIACAAAAAAAAgAAAAAEAA=</HashCode>
+      <FileName>Controles\loginControler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrjTreino.DAL.models.Funcionario">
+    <Position X="15.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAQAEAAkA=</HashCode>
+      <FileName>DAL\models\Funcionario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrjTreino.DAL.calendarioComandos">
+    <Position X="5.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQgBAAQAQAAEAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\calendarioComandos.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="calendarioControler" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PrjTreino.DAL.Conexao">
+    <Position X="10.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAQAAAFgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Conexao.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="LoginComands" />
+      <Property Name="FuncCommands" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PrjTreino.DAL.LoginComands">
+    <Position X="8.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAQABCAgAQgIEAABCAAAAAAAAAAIAAA=</HashCode>
+      <FileName>DAL\LoginComands.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="loginControler" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PrjTreino.userControls.Classes.Compromissos">
+    <Position X="17.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>userControls\Classes\Compromisso.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrjTreino.userControls.Classes.Compromisso">
+    <Position X="14.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAEAAAAAAACAAABAAAAAEABAABAAQAAEAAAA=</HashCode>
+      <FileName>userControls\Classes\Compromisso.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Compromissos" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PrjTreino.userControls.Classes.Items">
+    <Position X="1" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAEAAgAEEAAAAAgAAAQAAAAQAACAAAAAAAAAAAA=</HashCode>
+      <FileName>userControls\Classes\Items.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrjTreino.userControls.Meses">
+    <Position X="2.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>userControls\Classes\Meses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrjTreino.DAL.FuncCommands">
+    <Position X="12.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQEAAAAARAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\FuncCommands.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
