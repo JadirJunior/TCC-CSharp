@@ -1,0 +1,139 @@
+﻿<Window x:Class="PrjTreino.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PrjTreino"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        FontFamily="Montserrat"
+        Title="MainWindow" Height="700" Width="500" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" MouseDown="Window_MouseDown">
+    <Window.Resources>
+        <ResourceDictionary>
+            <DataTemplate DataType="{x:Type local:NotificationInformation}">
+                <StackPanel Margin="20">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <materialDesign:PackIcon Kind="{Binding Icon}"
+                                                 Height="48"
+                                                 Width="48"
+                                                 Margin="20, 25, 20, 20"
+                                                 Grid.Column="0" />
+                        <StackPanel Margin="20"
+                                    Grid.Column="1"
+                                    MinWidth="150">
+                            <TextBlock Text="{Binding Message}" FontSize="18"
+                                       Margin="0,10,0,0"></TextBlock>
+                        </StackPanel>
+                    </Grid>
+                    <Button Content="OK"
+                            Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"></Button>
+                </StackPanel>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Name="container" MouseMove="Container_MouseMove">
+        <materialDesign:DialogHost Name="View" Identifier="RootDialog">
+            <materialDesign:DialogHost.DialogContent>
+                <Grid Width="300" Height="150" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal" Margin="15">
+                        <materialDesign:PackIcon Kind="Exclamation" Foreground="{StaticResource PrimaryHueMidBrush}" Width="50" Height="50"/>
+                        <TextBlock Foreground="Gray" Width="200" Margin="15 5" TextWrapping="Wrap">
+                            Por favor, não deixe nenhum espaço em branco!
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="15">
+                        <Button Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Style="{DynamicResource MaterialDesignFlatButton}" Margin="4" VerticalAlignment="Center">
+                            Ok
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </materialDesign:DialogHost.DialogContent>
+            <Grid>
+            <StackPanel VerticalAlignment="Top" Height="200">
+            <Image Source="/PrjTreino;component/assets/Logo1.png" Width="200" Margin="45"/>
+            </StackPanel>
+        <StackPanel VerticalAlignment="Bottom" Height="500">
+            <StackPanel Margin="60,20,60,20">
+                <TextBlock Text="ACESSAR" FontSize="20"></TextBlock>
+            </StackPanel>
+                    <StackPanel Width="500" Margin="0,10,0,0">
+                        <Border 
+                            BorderBrush="LightGray" 
+                            BorderThickness="2"
+                            CornerRadius="25"
+                            Height="50"
+                            Width="400">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBox 
+                                    VerticalAlignment="Center" 
+                                    BorderThickness="0" 
+                                    Name="txtUsuario" 
+                                    materialDesign:HintAssist.Hint="Usuário" 
+                                    CaretBrush="Black" 
+                                    BorderBrush="Transparent"
+                                    SelectionBrush="Black" 
+                                    Background="Transparent" 
+                                    FontSize="18" 
+                                    HorizontalAlignment="Center" 
+                                    Width="350"
+                                    Margin="10,0,0,0"
+                                    materialDesign:HintAssist.IsFloating="False"
+                                    />
+                                <materialDesign:PackIcon Kind="Account" Width="30" Foreground="#9a9a9a" Height="30" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+                        <Border 
+                            BorderBrush="LightGray" 
+                            BorderThickness="2"
+                            CornerRadius="25"
+                            Height="50"
+                            Width="400"
+                            Margin="0,20,0,0">
+                        <StackPanel Orientation="Horizontal">
+                                <StackPanel Orientation="Horizontal">
+                                    <PasswordBox 
+                                    BorderBrush="Transparent"
+                                    VerticalAlignment="Center" 
+                                    BorderThickness="0" 
+                                    Name="txtSenha" 
+                                    materialDesign:HintAssist.Hint="Senha" 
+                                    CaretBrush="Black" 
+                                    SelectionBrush="Black" 
+                                    Background="Transparent" 
+                                    FontSize="18" 
+                                    HorizontalAlignment="Center" 
+                                    Width="350"
+                                    Margin="10,0,0,0"
+                                    materialDesign:HintAssist.IsFloating="False"
+                                    />
+                                    <materialDesign:PackIcon Kind="Lock" Foreground="#9a9a9a" Width="30" Height="30" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                        <CheckBox Content="Manter-me conectado" FontSize="18" Margin="70,20,0,0"  HorizontalAlignment="Left" Cursor="Hand" x:Name="manter_conectado"></CheckBox>
+                        <Border 
+                            Margin="0,40,0,0"
+                            BorderBrush="#FF9C27B0"
+                            Background="#FF9C27B0"
+                            BorderThickness="1"
+                            CornerRadius="20"
+                            Width="400"
+                            Height="40">
+                            <Button VerticalAlignment="Center"  Height="28"  Name="btnAcessar" Background="Transparent" BorderThickness="0" Style="{StaticResource MaterialDesignRaisedButton}"  Foreground="White" Content="ACESSAR" FontSize="16" FontWeight="Medium"  Click="Button_Click"></Button>
+                        </Border>
+                        <Rectangle Width="400" Margin="0,40,0,0" Fill="Gray" Height="2"></Rectangle>
+                <StackPanel Margin="0,30,0,0" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock FontSize="15"><Run Text="Não possui uma conta? "></Run></TextBlock>
+                    <TextBlock Cursor="Hand" Foreground="#FF9C27B0" FontSize="15" TextDecorations="underline"><Run Text="Cadastre-se" MouseDown="Run_MouseDown"></Run></TextBlock>
+                </StackPanel>
+                
+            </StackPanel>
+        </StackPanel>
+        </Grid>
+        </materialDesign:DialogHost>
+    </Grid>
+</Window>
